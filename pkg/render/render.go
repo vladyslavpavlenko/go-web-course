@@ -11,7 +11,7 @@ import (
 // RenderTemplate renders templates using html/template
 func RenderTemplate(w http.ResponseWriter, tmpl string) {
 	// Create a template cash
-	tc, err := createTemplateCache()
+	tc, err := CreateTemplateCache()
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -25,18 +25,15 @@ func RenderTemplate(w http.ResponseWriter, tmpl string) {
 	buf := new(bytes.Buffer)
 
 	err = t.Execute(buf, nil)
-	if err != nil {
-		log.Println(err)
-	}
 
 	// Render the template
 	_, err = buf.WriteTo(w)
 	if err != nil {
-		log.Println(err)
+		log.Println("error rendering the template: ", err)
 	}
 }
 
-func createTemplateCache() (map[string]*template.Template, error) {
+func CreateTemplateCache() (map[string]*template.Template, error) {
 	myCache := map[string]*template.Template{}
 
 	// Get all the files named*.page.gohtml from ./templates
