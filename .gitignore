@@ -19,3 +19,8 @@
 
 # Go workspace file
 go.work
+
+.idea
+.gitattributes
+.DS_Store
+/cmd/.DS_Store
