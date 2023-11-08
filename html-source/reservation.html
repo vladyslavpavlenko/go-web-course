@@ -96,6 +96,9 @@
             <div class="row">
                 <div class="col">
                     <p id="my_paragraph">This is some text</p>
+                    <p>
+                        <button id="colorButton" class="btn btn-outline-secondary">Click me</button>
+                    </p>
                 </div>
 
             </div>
@@ -114,6 +117,8 @@
         <script src="https://unpkg.com/notie"></script>
 
     <script>
+        let attention = Prompt();
+
         (() => {
             'use strict'
 
@@ -133,6 +138,10 @@
             })
         })()
 
+        document.getElementById("colorButton").addEventListener("click", function () {
+            attention.toast();
+        })
+
         const elem = document.getElementById('reservation-dates');
         const rangepicker = new DateRangePicker(elem, {
             format: "yyyy-mm-dd",
@@ -144,6 +153,22 @@
                 text: msg,
             })
         }
+
+        function Prompt() {
+            let toast = function() {
+                console.log("toast");
+            }
+
+            let success = function () {
+                console.log("success");
+            }
+
+            return {
+                toast: toast,
+                success: success,
+            }
+        }
     </script>
+
     </body>
 </html>

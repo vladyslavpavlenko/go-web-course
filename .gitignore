@@ -22,5 +22,4 @@ go.work
 
 .idea
 .gitattributes
-.DS_Store
-/cmd/.DS_Store
+**/.DS_Store
