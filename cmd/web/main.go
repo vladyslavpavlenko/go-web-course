@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 	"github.com/alexedwards/scs/v2"
-	"github.com/vladyslavpavlenko/go-web-course/pkg/config"
-	"github.com/vladyslavpavlenko/go-web-course/pkg/handlers"
-	"github.com/vladyslavpavlenko/go-web-course/pkg/render"
+	"github.com/vladyslavpavlenko/go-web-course/internal/config"
+	"github.com/vladyslavpavlenko/go-web-course/internal/handlers"
+	"github.com/vladyslavpavlenko/go-web-course/internal/render"
 	"log"
 	"net/http"
 	"time"

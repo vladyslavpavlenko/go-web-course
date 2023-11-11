@@ -3,8 +3,8 @@ package render
 import (
 	"bytes"
 	"github.com/justinas/nosurf"
-	"github.com/vladyslavpavlenko/go-web-course/pkg/config"
-	"github.com/vladyslavpavlenko/go-web-course/pkg/models"
+	"github.com/vladyslavpavlenko/go-web-course/internal/config"
+	"github.com/vladyslavpavlenko/go-web-course/internal/models"
 	"html/template"
 	"log"
 	"net/http"

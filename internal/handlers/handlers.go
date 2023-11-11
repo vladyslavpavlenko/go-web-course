@@ -3,9 +3,9 @@ package handlers
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/vladyslavpavlenko/go-web-course/pkg/config"
-	"github.com/vladyslavpavlenko/go-web-course/pkg/models"
-	"github.com/vladyslavpavlenko/go-web-course/pkg/render"
+	"github.com/vladyslavpavlenko/go-web-course/internal/config"
+	"github.com/vladyslavpavlenko/go-web-course/internal/models"
+	"github.com/vladyslavpavlenko/go-web-course/internal/render"
 	"log"
 	"net/http"
 )
