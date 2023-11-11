@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/vladyslavpavlenko/go-web-course/internal/config"
+	"github.com/vladyslavpavlenko/go-web-course/internal/forms"
 	"github.com/vladyslavpavlenko/go-web-course/internal/models"
 	"github.com/vladyslavpavlenko/go-web-course/internal/render"
 	"log"
@@ -50,6 +51,12 @@ func (m *Repository) About(w http.ResponseWriter, r *http.Request) {
 
 func (m *Repository) Reservation(w http.ResponseWriter, r *http.Request) {
 	render.RenderTemplate(w, r, "make-reservation.page.gohtml", &models.TemplateData{})
+}
+
+func (m *Repository) PostReservation(w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, r, "make-reservation.page.gohtml", &models.TemplateData{
+		Form: forms.New(nil),
+	})
 }
 
 func (m *Repository) Generals(w http.ResponseWriter, r *http.Request) {
