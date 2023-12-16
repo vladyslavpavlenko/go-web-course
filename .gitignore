@@ -24,3 +24,4 @@ go.work
 .gitattributes
 .DS_Store
 .sh
+bookings
