@@ -1,93 +1,69 @@
 {{template "base" .}}
 
 {{define "content"}}
-    <div id="main-carousel" class="carousel slide carousel-fade">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#main-carousel"
-                    data-bs-slide-to="0" class="active" aria-current="true"
-                    aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#main-carousel"
-                    data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#main-carousel"
-                    data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
+    <div id="main-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+        <ol class="carousel-indicators">
+            <li data-bs-target="#main-carousel" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#main-carousel" data-bs-slide-to="1"></li>
+            <li data-bs-target="#main-carousel" data-bs-slide-to="2"></li>
+        </ol>
 
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="static/images/outside.png" class="d-block w-100"
-                     alt="...">
+                <img src="/static/images/tray.png" class="d-block w-100" alt="Woman and laptop">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the
-                        second slide.</p>
+                    <h5>Nature's Beauty</h5>
+                    <p class="px-5">Experience the breathtaking beauty of our surroundings, a perfect blend of tranquility and natural splendor.</p>
                 </div>
             </div>
-
             <div class="carousel-item">
-                <img src="static/images/tray.png" class="d-block w-100"
-                     alt="...">
+                <img src="/static/images/woman-laptop.png" class="d-block w-100" alt="Tray with coffee">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the
-                        second slide.</p>
+                    <h5>Scenic Courtyard</h5>
+                    <p class="px-5">Discover serenity in our courtyard, where nature and traditional architecture  unite to create a peaceful escape.</p>
                 </div>
             </div>
-
             <div class="carousel-item">
-                <img src="static/images/woman-laptop.png"
-                     class="d-block w-100" alt="...">
+                <img src="/static/images/outside.png" class="d-block w-100" alt="Outside">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the
-                        second slide.</p>
+                    <h5>Charming Streetscape</h5>
+                    <p class="px-5">Discover the allure of our hotel's charming streets, where traditional Japanese architecture harmoniously blends with modern design.</p>
                 </div>
             </div>
+            <button class="carousel-control-prev" type="button"
+                    data-bs-target="#main-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button"
+                    data-bs-target="#main-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-
-        <button class="carousel-control-prev" type="button"
-                data-bs-target="#main-carousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-
-        <button class="carousel-control-next" type="button"
-                data-bs-target="#main-carousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
 
     <div class="container">
         <div class="row">
-            <div class="column">
-                <div class="carousel-item active">
-                    <h1 class="text-center mt-5">Welcome to Fort Smith Bed &
-                        Breakfast</h1>
-                    <p>
-                        Your home away from home, set on the majestic waters
-                        of the Atlantic ocean, this will be the vacation to
-                        remember.
-                        Your home away from home, set on the majestic waters
-                        of the Atlantic ocean, this will be the vacation to
-                        remember.
-                        Your home away from home, set on the majestic waters
-                        of the Atlantic ocean, this will be the vacation to
-                        remember.
-                        Your home away from home, set on the majestic waters
-                        of the Atlantic ocean, this will be the vacation to
-                        remember.
-                        Your home away from home, set on the majestic waters
-                        of the Atlantic ocean, this will be the vacation to
-                        remember.
-                    </p>
-                </div>
+            <div class="col px-5">
+                <h1 class="text-center mt-5">Welcome to Zen Haven!</h1>
+                <p>
+                    Greetings and a warm welcome to Zen Haven, your serene escape nestled in the heart of Japan. Embrace the tranquility as you embark on a journey of relaxation and cultural immersion. Our commitment is to provide you with an experience that harmonizes the rich traditions of Japan with modern comfort. From the picturesque landscapes to the elegant interiors, every detail is crafted to ensure your stay is nothing short of extraordinary. Let the essence of Zen Haven envelop you as you indulge in the beauty of our surroundings and the hospitality of our staff. Your Japanese adventure begins here – welcome to Zen Haven!
+                </p>
             </div>
         </div>
-    </div>
 
-    <div class="row">
-        <div class="col text-center">
-            <a href="/search-availability" class="btn btn-success">Make Reservation Now</a>
+
+        <div class="row">
+
+            <div class="col text-center">
+
+                <a href="/search-availability" class="btn btn-success">Make Reservation Now</a>
+
+            </div>
         </div>
+
+
     </div>
 {{end}}

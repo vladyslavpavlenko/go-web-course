@@ -4,9 +4,9 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h1>Login</h1>
+                <h1 class="mt-5 text-center">Login</h1>
 
-                <form method="post" action="/user/login" novalidate>
+                <form class="mx-5" method="post" action="/user/login" novalidate>
                     <input type="hidden" name="csrf_token" value="{{.CSRFToken}}">
 
                     <div class="form-group mt-3">
