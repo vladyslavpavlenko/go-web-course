@@ -58,7 +58,11 @@ func (m *testDBRepo) UpdateUser(u models.User) error {
 }
 
 func (m *testDBRepo) Authenticate(email, testPassword string) (int, string, error) {
-	return 0, "", nil
+	if email == "me@here.ua" {
+		return 1, "", nil
+	}
+
+	return 0, "", errors.New("some error")
 }
 
 func (m *testDBRepo) AllReservations() ([]models.Reservation, error) {
@@ -101,4 +105,12 @@ func (m *testDBRepo) GetRestrictionsForRoomByDate(roomID int, start, end time.Ti
 	var restrictions []models.RoomRestriction
 
 	return restrictions, nil
+}
+
+func (m *testDBRepo) InsertBlockForRoom(id int, startDate time.Time) error {
+	return nil
+}
+
+func (m *testDBRepo) DeleteBlockByID(id int) error {
+	return nil
 }
