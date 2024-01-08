@@ -1,1 +1,1 @@
-delete from users where email = 'admin@admin.com'
+delete from users where email = 'admin@admin.com';
